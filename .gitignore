@@ -1,0 +1,44 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+!*.tfvars.example
+.terraform/
+.terraform.lock.hcl
+terraform.tfplan
+terraform.tfplan.*
+
+# Credentials and sensitive files
+CREDENTIALS.txt
+credentials.txt
+supabase_credentials.json
+SUPABASE_ACCESS_INFO.txt
+
+# SSH Keys
+*.pem
+*.key
+id_rsa*
+.ssh/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/settings.json
+.vscode/launch.json
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+cloud-init-output.log
+
+# Temporary files
+*.tmp
+*.temp
+*~

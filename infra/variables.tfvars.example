@@ -1,0 +1,41 @@
+# =============================================================================
+# SUPABASE SELF-HOST CONFIGURATION
+# =============================================================================
+# Copy this file to variables.tfvars and update with your actual values
+
+# Linode Configuration
+# ====================
+# Get your API token from: https://cloud.linode.com/profile/tokens
+# Requires permissions: Domains (if using custom domain), IPs, Linodes, Volumes
+linode_api_token = "your_linode_api_token_here"
+
+# SSH Public Key
+# ==============
+# Generate with: ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+# Then copy the content of ~/.ssh/id_rsa.pub
+ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2E... your_public_key_here"
+
+# Optional: Custom Domain Configuration
+# =====================================
+# If you want to use a custom domain for your Supabase instance:
+# 1. Add your domain to Linode DNS Manager
+# 2. Get the domain ID from the DNS manager
+# 3. Uncomment and configure the lines below
+
+# domain_name = "supabase.yourdomain.com"
+# domain_id   = "123456"  # Get this from Linode DNS manager
+
+# =============================================================================
+# DEPLOYMENT NOTES:
+# =============================================================================
+# - After copying and configuring this file as variables.tfvars, run:
+#   terraform init
+#   terraform plan -var-file="variables.tfvars"
+#   terraform apply -var-file="variables.tfvars"
+#
+# - Or use the deployment script: ./deploy.sh
+#
+# - Your Supabase instance will be available at:
+#   Studio:  http://your-server-ip:3000
+#   API:     http://your-server-ip:8000
+# =============================================================================
